@@ -47,8 +47,9 @@
 (defcustom fira-code-mode-disabled-ligatures ()
   "Add a string to this list to prevent it from being displayed with a ligature.
 
-After editing this variable, any buffers that previously had the ligature minor mode enabled
-will need to disable and re-enable the mode in order for the edits to take effect."
+After editing this variable, any buffers that previously had the ligature minor
+mode enabled will need to disable and re-enable the mode in order for the edits
+to take effect."
   :type '(repeat string) ;; TODO: Make this of type `set'
   :group 'fira-code-ligatures)
 
@@ -99,7 +100,8 @@ option; if \"x\" is disabled but this option is enabled, then strings like
     "%%" "x" ":" "+" "+" "*"))
 
 (defun fira-code-mode--ligatures ()
-  "Generate a list of all ligatures not disabled via `fira-code-mode-disabled-ligatures'."
+  "Generate a list of all ligatures not disabled via
+`fira-code-mode-disabled-ligatures'."
   (mapcar
    (lambda (s)
      (if (member s fira-code-mode-disabled-ligatures)
